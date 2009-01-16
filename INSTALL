@@ -18,6 +18,7 @@ Here's the step-by-step procedure to install the RPMs by hand (not recommended):
    1.1. The following RPMs from Fedora are required:
         glib2 (used by libti*)
         qt3
+        dbus-qt3
         qt and qt-x11 (for the Qt Assistant help file viewer, the packages are
                        patched to use the Qt 4 version)
         kdelibs3, version 3.5.7 or higher
