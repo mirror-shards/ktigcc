@@ -1,7 +1,7 @@
 /*
    ktigcc - TIGCC IDE for KDE
 
-   Copyright (C) 2004-2007 Kevin Kofler
+   Copyright (C) 2004-2009 Kevin Kofler
    Copyright (C) 2006 Joey Adams
 
    This program is free software; you can redistribute it and/or modify
@@ -81,9 +81,9 @@ int main(int argc, char *argv[])
   if (KDE::version() < KDE_MAKE_VERSION(3,5,7))
     qFatal("KDE 3.5.7 or higher required");
 
-  KAboutData about("ktigcc","TIGCC IDE for KDE","1.09",
+  KAboutData about("ktigcc","TIGCC IDE for KDE","1.10",
   "TIGCC C and ASM SDK", KAboutData::License_GPL,
-  "Copyright (C) 2004-2007 Kevin Kofler and Joey Adams. All rights reserved.\n"
+  "Copyright (C) 2004-2009 Kevin Kofler and Joey Adams. All rights reserved.\n"
   "TIGCC Copyright (C) 1999-2007 The TIGCC Team.",
   "Original linker by Xavier and Niklas\n"
   "Compiler modifications by Jean, Sebastian and Kevin\n"

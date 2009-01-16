@@ -1,6 +1,6 @@
 Name: ktigcc
-Version: 1.09
-Release: 4
+Version: 1.10
+Release: 1
 Vendor: TIGCC Team (http://tigcc.ticalc.org)
 Packager: Kevin Kofler <Kevin@tigcc.ticalc.org>
 Source: %{name}.tar.bz2
@@ -17,8 +17,6 @@ KTIGCC is an IDE for the TIGCC cross-toolchain on *nix/X11 platforms, using the 
 %prep
 %setup -n %{name}
 %patch0 -p1
-# fix wrong header file included (breaks with GCC 4.3)
-sed -i -e 's/<cstdlib>/<cstring>/g' callbacks.cpp
 
 %build
 qmake PREFIX="%{_prefix}" CXXFLAGS="$RPM_OPT_FLAGS"
@@ -120,6 +118,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/doc/ktigcc
 
 %changelog
+* Fri Jan 16 2009 Kevin Kofler <Kevin@tigcc.ticalc.org> - 1.10-1
+Bump version to 1.10.
+Drop GCC 4.3 sed hack (fixed in 1.10).
+
 * Fri Jun 6 2008 Kevin Kofler <Kevin@tigcc.ticalc.org> - 1.09-4
 Fix Qt 4 Assistant patch not to crash if ~/.config/Trolltech doesn't exist yet.
 
