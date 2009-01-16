@@ -173,12 +173,9 @@ QMAKE_CXXFLAGS_RELEASE = $$CXXFLAGS -Wno-non-virtual-dtor $$PKGCONFIG_CFLAGS
 
 QMAKE_LFLAGS_RELEASE = -s
 
-DISTFILES += $${documentation.files} INSTALL configure KTIGCC.anjuta fedora/ktigcc.spec images/copyright.txt
+DISTFILES += $${documentation.files} INSTALL configure KTIGCC.anjuta images/copyright.txt
 
 distbz2.target = dist-bzip2
 distbz2.commands = zcat ktigcc.tar.gz | bzip2 --best -c > ktigcc.tar.bz2
 distbz2.depends = dist
-rpm.target = rpm
-rpm.commands = rpmbuild -ta ktigcc.tar.bz2
-rpm.depends = distbz2
-QMAKE_EXTRA_UNIX_TARGETS += distbz2 rpm
+QMAKE_EXTRA_UNIX_TARGETS += distbz2
