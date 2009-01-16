@@ -1,8 +1,12 @@
 This is a summary of the changes in KTIGCC since the first alpha release:
 
-CVS ktigcc-1-branch (2008-05-01):
+KTIGCC 1.10 (2009-01-17):
 
+* Fixed configure wrapper script to work if /bin/sh is not bash (Romain Liévin).
 * Fixed the compilation with GCC 4.3.
+* Fixed harmless typo causing a minimal performance loss and a GCC 4.3 compiler
+  warning (but some even more harmless warnings are still left).
+* Fixed a typo causing an invalid array access when renaming a data variable.
 
 
 KTIGCC 1.09 (2007-10-09):
