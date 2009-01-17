@@ -1,3 +1,70 @@
+2009-01-16 23:33  kevinkofler
+
+	* INSTALL: Add dbus-qt3 to the requirements for the RPM.
+
+2009-01-16 23:25  kevinkofler
+
+	* ktigcc.pro, fedora/ktigcc-1.09-assistant-qt4.diff[DEAD],
+	  fedora/ktigcc.spec[DEAD]: Remove Fedora RPM specfile - now
+	  maintained on svn.calcforge.org. Remove "make rpm" target.
+
+2009-01-16 23:01  kevinkofler
+
+	* ktigcc.cpp, fedora/ktigcc.spec: Bump version to 1.10. Bump
+	  copyright years.
+
+2009-01-16 22:52  kevinkofler
+
+	* NEWS: Summarize changes since 1.09.
+
+2009-01-16 22:02  kevinkofler
+
+	* INSTALL: Update RPM installation instructions. Remove outdated
+	  claim that KDE 4 is "not even alpha" yet.
+
+2009-01-02 03:11  kevinkofler
+
+	* mainform.ui.h: Fix typo causing invalid array access when
+	  renaming data variable.
+
+2009-01-02 02:57  kevinkofler
+
+	* tpr.cpp: Remove bogus semicolon after minams_param macro to fix
+	  else if chain.
+
+2008-06-06 01:03  kevinkofler
+
+	* fedora/: ktigcc-1.09-assistant-qt4.diff, ktigcc.spec: Fedora RPM:
+	  Fix Qt 4 Assistant patch not to crash if ~/.config/Trolltech
+	  doesn't exist yet.
+
+2008-05-01 17:37  kevinkofler
+
+	* fedora/: ktigcc-1.09-assistant-qt4.diff, ktigcc.spec: Fedora RPM
+	  specfile: Don't BuildRequire qt-devel explicitly.  Patch to
+	  support and prefer Qt 4 Assistant.  Require qt4-assistant instead
+	  of qt-devel.	Fix wrong header file included in callbacks.cpp
+	  (breaks with GCC 4.3).
+
+2008-05-01 17:33  kevinkofler
+
+	* NEWS, callbacks.cpp: #include <cstring> instead of <cstdlib> for
+	  std::memset (fixes build with g++ 4.3).
+
+2008-01-13 08:32  kevinkofler
+
+	* fedora/ktigcc.spec: Fedora RPM specfile: Bump Release for rebuild
+	  for tilibs soname bumps.  Specify GPL version in License tag.
+	  BR/Require kdelibs3/kdebase3 instead of kdelibs/kdebase.
+
+2007-12-09 10:03  roms
+
+	* configure: Fix wrapper script to work if /bin/sh is not bash.
+
+2007-10-09 22:22  kevinkofler
+
+	* ChangeLog: KTIGCC 1.09 release.
+
 2007-10-09 01:34  kevinkofler
 
 	* ktigcc.cpp, fedora/ktigcc.spec: Bump version to 1.09.
