@@ -171,8 +171,8 @@ Preferences::Preferences(QWidget* parent, const char* name, bool modal, Qt::Wind
       break;
   }
 
-  // Don't allow selecting a USB cable if libticables2 hasn't been compiled
-  // without USB support or if USB support can't be used.
+  // Don't allow selecting a USB cable if libticables2 has been compiled without
+  // USB support or if USB support can't be used.
   if (!have_usb) {
     if (silverLink->isChecked() || directLink->isChecked()) {
       grayLink->setChecked(TRUE);
